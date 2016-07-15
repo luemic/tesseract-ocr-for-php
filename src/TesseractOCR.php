@@ -1,4 +1,8 @@
 <?php
+//namespace Tesseract;
+
+use Exception\Tesseract as TesseractException;
+
 /**
  * A wrapper to work with TesseractOCR inside PHP.
  */
@@ -85,7 +89,7 @@ class TesseractOCR
         exec($this->buildCommand(), $output, $returnValue);
         $output = implode(PHP_EOL, $output);
         if (0 < $returnValue) {
-            throw new Exception(sprintf('error during execution of tesseract %s', $output));
+            throw new TesseractException(sprintf('error during execution of tesseract %s', $output));
         }
 
         return trim($output);
