@@ -22,8 +22,6 @@
         "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
-        "classmap": [
-            "src"
-        ]
+        "psr-0": { "": "src/" }
     }
 }
