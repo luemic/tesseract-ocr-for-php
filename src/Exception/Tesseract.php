@@ -1,10 +1,13 @@
 <?php
+namespace Exception;
+
+use Exception;
 
 /**
  *
  * @author: michael.luehr <michael.luehr@gmail.com>
  */
-class TesseractException extends Exception
+class Tesseract extends Exception
 {
 
 }
