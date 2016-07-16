@@ -1,27 +1,12 @@
 <?php
-use Tesseract\TesseractOCR;
-
-/**
- * Wrapping TesseractOCR class to be able to unit test some functionality.
- */
-class WrapTesseractOCR extends TesseractOCR
-{
-    /**
-     * Exposing 'buildCommand' method by making it public, without changing
-     * its implementation, just to be able invoke it from the unit tests.
-     */
-    public function buildCommand()
-    {
-        return parent::buildCommand();
-    }
-}
+namespace Tesseract\Tests;
 
 /**
  * The only purpose of the following unit tests is to verify if the tesseract
  * command gets correctly built with its options.
  * The commands are not actually being executed during the tests.
  */
-class UnitTests extends PHPUnit_Framework_TestCase
+class UnitTests extends \PHPUnit_Framework_TestCase
 {
     /**
      * Simplest tesseract command, with no additional options.

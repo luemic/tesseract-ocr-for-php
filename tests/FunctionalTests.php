@@ -1,11 +1,13 @@
 <?php
+namespace Tesseract\Tests;
+
 use Tesseract\TesseractOCR;
 
 /**
  * End-to-end tests, just to get a feeling of how a real user would interact
  * with this library.
  */
-class FunctionalTests extends PHPUnit_Framework_TestCase
+class FunctionalTests extends \PHPUnit_Framework_TestCase
 {
     /**
      * Recognizing text from an image.
@@ -39,7 +41,7 @@ class FunctionalTests extends PHPUnit_Framework_TestCase
      */
     public function testCommandWithInvalidFile()
     {
-        $actual = (new WrapTesseractOCR('image.pn'))
+        $actual = (new TesseractOCR('image.pn'))
             ->run();
     }
 }

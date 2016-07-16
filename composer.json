@@ -23,7 +23,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Tesseract\\": "src/Tesseract"
+            "Tesseract\\": "src/Tesseract",
+            "Tesseract\\Tests\\": "tests"
         }
     }
 }
