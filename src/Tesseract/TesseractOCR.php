@@ -149,9 +149,9 @@ class TesseractOCR
      * @param string ...$languages
      * @return TesseractOCR
      */
-    public function lang()
+    public function lang(array $languages = array())
     {
-        $this->languages = func_get_args();
+        $this->languages = $languages;
         return $this;
     }
 

@@ -102,7 +102,7 @@ class UnitTests extends \PHPUnit_Framework_TestCase
         $expected = "tesseract 'image.png' stdout -l deu";
 
         $actual = (new WrapTesseractOCR('image.png'))
-            ->lang('deu')
+            ->lang(['deu'])
             ->buildCommand();
 
         $this->assertEquals($expected, $actual);
@@ -119,7 +119,7 @@ class UnitTests extends \PHPUnit_Framework_TestCase
         $expected = "tesseract 'image.png' stdout -l eng+deu+jpn";
 
         $actual = (new WrapTesseractOCR('image.png'))
-            ->lang('eng', 'deu', 'jpn')
+            ->lang(['eng', 'deu', 'jpn'])
             ->buildCommand();
 
         $this->assertEquals($expected, $actual);
