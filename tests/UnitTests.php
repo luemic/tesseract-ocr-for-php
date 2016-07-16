@@ -1,5 +1,5 @@
 <?php
-use TesseractOCR;
+use Tesseract\TesseractOCR;
 
 /**
  * Wrapping TesseractOCR class to be able to unit test some functionality.

@@ -1,5 +1,5 @@
 <?php
-namespace Exception;
+namespace Tesseract\Exception;
 
 use Exception;
 

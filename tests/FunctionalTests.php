@@ -1,5 +1,5 @@
 <?php
-use Exception\Tesseract as TesseractException;
+use Tesseract\TesseractOCR;
 
 /**
  * End-to-end tests, just to get a feeling of how a real user would interact
@@ -35,7 +35,7 @@ class FunctionalTests extends PHPUnit_Framework_TestCase
     /**
      * in case of errors (e.g. non-existent files) an exception is thrown
      *
-     * @expectedException Exception\Tesseract
+     * @expectedException Tesseract\Exception\Tesseract
      */
     public function testCommandWithInvalidFile()
     {

@@ -22,6 +22,8 @@
         "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": {
+            "Tesseract\\": "src/Tesseract"
+        }
     }
 }

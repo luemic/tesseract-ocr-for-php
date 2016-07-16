@@ -1,7 +1,7 @@
 <?php
-//namespace Tesseract;
+namespace Tesseract;
 
-use Exception\Tesseract as TesseractException;
+use Tesseract\Exception\Tesseract as TesseractException;
 
 /**
  * A wrapper to work with TesseractOCR inside PHP.
