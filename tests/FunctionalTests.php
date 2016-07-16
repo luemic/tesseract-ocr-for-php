@@ -1,6 +1,7 @@
 <?php
 namespace Tesseract\Tests;
 
+use Tesseract\Exception\Tesseract as TesseractExecption;
 use Tesseract\TesseractOCR;
 
 /**
@@ -37,11 +38,14 @@ class FunctionalTests extends \PHPUnit_Framework_TestCase
     /**
      * in case of errors (e.g. non-existent files) an exception is thrown
      *
-     * @expectedException Tesseract\Exception\Tesseract
      */
     public function testCommandWithInvalidFile()
     {
-        $actual = (new TesseractOCR('image.pn'))
-            ->run();
+        try {
+            $actual = (new TesseractOCR('image.pn'))
+                ->run();
+        } catch (TesseractExecption $e) {
+            $this->assertStringStartsWith('error during execution of tesseract', $e->getMessage());
+        }
     }
 }
